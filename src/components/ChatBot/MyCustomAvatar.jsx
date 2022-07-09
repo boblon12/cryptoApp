@@ -12,7 +12,7 @@ function MyCustomAvatar() {
       >
         <img
           alt="BotAvatar"
-          src={user.photoURL || userAvatar}
+          src={user?.photoURL ? user?.photoURL : userAvatar}
           style={{
             width: '40px',
             height: '40px',

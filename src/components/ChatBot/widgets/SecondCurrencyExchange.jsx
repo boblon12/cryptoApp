@@ -18,7 +18,7 @@ function SecondCurrencyExchange({ secondCurrency, setState, actionProvider }) {
   };
 
   return (
-    <div className="stats">
+    <div className="statistic">
       <Select
         style={{ width: '100%', textAlign: 'center' }}
         defaultValue="🇷🇺 RUB"

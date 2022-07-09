@@ -13,6 +13,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [firstCurrency, setFirstCurrency] = useState('');
   const [secondCurrency, setSecondCurrency] = useState('');
+  const [activeTheme, setActiveTheme] = useState(true);
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       setUser(user);
@@ -27,6 +28,8 @@ export const AuthProvider = ({ children }) => {
     setFirstCurrency,
     secondCurrency,
     setSecondCurrency,
+    activeTheme,
+    setActiveTheme,
   };
   return (
     <AuthContext.Provider value={value}>

@@ -19,8 +19,8 @@ import { auth } from '../firebase';
 import icons from '../images/crypto.png';
 import { useAuth } from '../context/AuthContext';
 
-const FineMenu = ({ setActive }) => {
-  const { user } = useAuth();
+const FineMenu = () => {
+  const { user, activeTheme, setActiveTheme } = useAuth();
   const [screenSize, setScreenSize] = useState(undefined);
   const [activeMenu, setActiveMenu] = useState(true);
   const [collapsed, setCollapsed] = useState(true);
@@ -49,8 +49,7 @@ const FineMenu = ({ setActive }) => {
   const [theme, setTheme] = useState('light');
   const changeTheme = (value) => {
     setTheme(value ? 'dark' : 'light');
-    if (value === true) setActive();
-    else setActive();
+    setActiveTheme(!activeTheme);
   };
 
   const toggleCollapsed = () => {

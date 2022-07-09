@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { Switch, Route, Link, Redirect } from 'react-router-dom';
-import { Layout, Typography } from 'antd';
+import React, { useMemo } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { Layout } from 'antd';
 import { Homepage, News, Cryptocurrencies, CryptoDetails } from './components';
 import './App.css';
 import FineMenu from './components/Navbar';
@@ -9,13 +9,10 @@ import Chat from './components/Chat';
 import { useAuth } from './context/AuthContext';
 import 'react-chatbot-kit/build/main.css';
 import ChatBotContainer from './components/ChatBot/ChatBotContainer';
+import Footer from './components/Footer';
 
 const App = () => {
   const { user } = useAuth();
-  const [active, setActivestyle] = useState(true);
-  const setActive = () => {
-    setActivestyle(!active);
-  };
   const layout = useMemo(() => (
     <>
       {user ? (
@@ -74,37 +71,10 @@ const App = () => {
   return (
     <div className="app">
       <>
-        <FineMenu active={active} setActive={setActive} />
+        <FineMenu />
         <div className="main">
           {layout}
-          <div
-            className="footer"
-            style={
-              active
-                ? { 'background-color': 'white' }
-                : { 'background-color': '#001529' }
-            }
-          >
-            <Typography.Title
-              level={5}
-              style={
-                active
-                  ? { color: 'black', textAlign: 'center' }
-                  : { color: 'white', textAlign: 'center' }
-              }
-            >
-              Copyright © 2022
-              <Link to="/">Give me crypto</Link> <br />
-              All Rights Reserved.
-            </Typography.Title>
-            <a
-              target="_blank"
-              href="https://vk.com/faershtein1337"
-              rel="noreferrer"
-            >
-              Faershtein Daniil
-            </a>
-          </div>
+          <Footer />
         </div>
         <ChatBotContainer />
       </>

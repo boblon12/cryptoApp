@@ -1,6 +1,7 @@
 /* eslint-disable comma-dangle */
 import { Loader } from '@chatscope/chat-ui-kit-react';
 import React, { useLayoutEffect } from 'react';
+import millify from 'millify';
 import { useGetCurrencyExchangeQuery } from '../../../services/currencyApi';
 
 function ExchangeResult({ firstCurrency, secondCurrency, actionProvider }) {
@@ -23,7 +24,7 @@ function ExchangeResult({ firstCurrency, secondCurrency, actionProvider }) {
           </div>
           <div className="column-right">
             <p>
-              {data} {secondCurrency}
+              {millify(data, { precision: 3 })} {secondCurrency}
             </p>
           </div>
         </>

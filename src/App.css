@@ -66,9 +66,6 @@ html,body {
     width: 100%;
 }
 
-.logo a{
-   color: white;
-}
 .menu-control-container{
     display: none !important;
     position: absolute !important;
@@ -395,10 +392,6 @@ width: 70%;
     
 }
 
-.bottom-menu {
-    margin-top: 20px;
-}
-
 .main{
     flex: 0.84;
     height: 100vh;
@@ -598,7 +591,7 @@ width: 70%;
     justify-content: center;
   }
 
-  .stats {
+  .statistic {
     color: white;
     position: relative;
     z-index: 100;

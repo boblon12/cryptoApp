@@ -10,10 +10,10 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimestamp = [];
   for (let i = 0; i < coinHistory?.data?.history?.length; i++) {
-    coinPrice.push(coinHistory?.data?.history[i].price);
+    coinPrice.unshift(coinHistory?.data?.history[i].price);
   }
   for (let i = 0; i < coinHistory?.data?.history?.length; i++) {
-    coinTimestamp.push(new Date((coinHistory?.data?.history[i].timestamp) * 1000).toLocaleDateString());
+    coinTimestamp.unshift(new Date((coinHistory?.data?.history[i].timestamp) * 1000).toLocaleDateString());
   }
 
   const data = {
@@ -55,4 +55,4 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   );
 };
 
-export default LineChart;
+export default React.memo(LineChart);

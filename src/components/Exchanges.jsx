@@ -107,9 +107,7 @@ const Exchanges = () => {
             optionFilterProp="children"
             placeholder="Bitcoin"
             onChange={(value) => setFirstCurrencyFunction(value)}
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
+            filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
             <Option value="Cryptocurency" disabled>
               Cryptocurrency
@@ -145,18 +143,14 @@ const Exchanges = () => {
             optionFilterProp="children"
             placeholder="DASH"
             onChange={(value) => setSecondCurrencyFunction(value)}
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
+            filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
-            <Option value="Cryptocurency" disabled>
-              Cryptocurrency
-            </Option>
+            <Option value="Cryptocurency" disabled>Cryptocurrency</Option>
             {topList.map((currency, i) => (
               <Option key={i} value={currency.fullname}>
                 {currency.fullname}
               </Option>
-            ))}
+              ))}
           </Select>
           <Card hoverable className="exchange-card">
             <Skeleton loading={isFetching} avatar active>

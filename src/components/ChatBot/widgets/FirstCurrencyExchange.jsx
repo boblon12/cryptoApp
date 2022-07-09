@@ -18,7 +18,7 @@ function FirstCurrencyExchange({ firstCurrency, setState, actionProvider }) {
   };
 
   return (
-    <div className="stats">
+    <div className="statistic">
       <Select
         style={{ width: '100%', textAlign: 'center', zIndex: 10000 }}
         defaultValue="🇪🇺 EUR"

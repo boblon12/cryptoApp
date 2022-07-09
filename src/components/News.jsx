@@ -7,8 +7,7 @@ import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 import Loader from './Loader';
 import ScrollToTop from '../helpers/ScrollToTop.js';
 
-const demoImage =
-  'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
+const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -34,14 +33,10 @@ const News = ({ simplified }) => {
             optionFilterProp="children"
             placeholder="Select a Crypto"
             onChange={(value) => setNewsCategory(value)}
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
+            filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
             <Option value="Cryptocurency">Cryptocurrency</Option>
-            {data?.data?.coins?.map((currency) => (
-              <Option value={currency.name}>{currency.name}</Option>
-            ))}
+            {data?.data?.coins?.map((currency) => <Option value={currency.name}>{currency.name}</Option>)}
           </Select>
         </Col>
       )}
@@ -68,8 +63,7 @@ const News = ({ simplified }) => {
                   <Avatar
                     xs={24}
                     src={
-                      news.provider[0]?.image?.thumbnail?.contentUrl ||
-                      demoImage
+                      news.provider[0]?.image?.thumbnail?.contentUrl || demoImage
                     }
                     alt=""
                   />

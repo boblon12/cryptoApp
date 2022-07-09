@@ -3,10 +3,8 @@ import millify from 'millify';
 import { Typography, Row, Col, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
-import Cryptocurrencies from './Cryptocurrencies';
-import News from './News';
+import { News, Cryptocurrencies } from './index';
 import Loader from './Loader';
-import Exchanges from './Exchanges';
 import ScrollToTop from '../helpers/ScrollToTop';
 
 const { Title } = Typography;
@@ -25,7 +23,6 @@ const Homepage = () => {
         <Col><Statistic title="Total Exchanges" value={millify(globalStats?.totalExchanges)} /></Col>
         <Col><Statistic title="Total Market Cap:" value={`$${millify(globalStats?.totalMarketCap)}`} /></Col>
         <Col><Statistic title="Total 24h Volume" value={`$${millify(globalStats?.total24hVolume)}`} /></Col>
-        <Col><Statistic title="Total Cryptocurrencies" value={globalStats?.total} /></Col>
         <Col><Statistic title="Total Markets" value={millify(globalStats?.totalMarkets)} /></Col>
       </Row>
       <div className="home-heading-container">
@@ -38,7 +35,6 @@ const Homepage = () => {
         <Title level={3}><Link to="/news">More</Link></Title>
       </div>
       <News simplified />
-      <Exchanges />
     </>
   );
 };
