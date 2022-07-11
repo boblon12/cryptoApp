@@ -86,6 +86,7 @@ const FineMenu = () => {
                       height: '100vh',
                     }
               }
+              selectedKeys={['login', 'logout']}
               theme={theme}
               inlineCollapsed
               className="bottom-menu"
@@ -130,6 +131,7 @@ const FineMenu = () => {
                     <Link to="/chat">Chat</Link>
                   </Menu.Item>
                   <Menu.Item
+                    key="logout"
                     onClick={() => {
                       toggleCollapsed();
                       handleLogout();
@@ -139,6 +141,7 @@ const FineMenu = () => {
                 </>
               ) : (
                 <Menu.Item
+                  key="login"
                   onClick={async () => {
                     toggleCollapsed();
                     await auth.signInWithRedirect(
@@ -158,6 +161,7 @@ const FineMenu = () => {
               style={{ height: '100vh' }}
               theme={theme}
               className="bottom-menu"
+              selectedKeys={['login', 'logout']}
             >
               <Switch
                 style={{
@@ -202,6 +206,7 @@ const FineMenu = () => {
                     <Link to="/chat">Chat</Link>
                   </Menu.Item>
                   <Menu.Item
+                    key="logout"
                     onClick={() => {
                       toggleCollapsed();
                       handleLogout();
@@ -213,6 +218,7 @@ const FineMenu = () => {
                 </>
               ) : (
                 <Menu.Item
+                  key="login"
                   onClick={async () => {
                     toggleCollapsed();
                     await auth.signInWithRedirect(
