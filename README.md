@@ -1,7 +1,6 @@
-<h1 align="center">App GiveMeCrypto</h1>
+<h1 align="center"><a href="https://givemecrypto-faershtein.netlify.app/">App GiveMeCrypto</a></h1>
 <h3 align="center">GiveMeCrypto is a crypto application for viewing up-to-date information about cryptocurrencies as well as discussing the latest crypto news with each other</h3>
 
-- Project link [project link](https://givemecrypto-faershtein.netlify.app/)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
