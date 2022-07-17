@@ -5,8 +5,8 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://vk.com/faershtein1337" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/VK_Compact_Logo_%282021-present%29.svg" alt="https://vk.com/faershtein1337" height="60" width="60" /></a>
-<a href="mailto:boblon12@mail.ru" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Gmail_Icon_%282013-2020%29.svg" alt="mailto:boblon12@mail.ru" height="60" width="60" /></a>
+<a href="https://vk.com/faershtein1337" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/VK_Compact_Logo_%282021-present%29.svg" alt="https://vk.com/faershtein1337" height="60" width="60" /></a>
+<a href="mailto:boblon12@mail.ru" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Gmail_Icon_%282013-2020%29.svg" alt="mailto:boblon12@mail.ru" height="60" width="60" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
